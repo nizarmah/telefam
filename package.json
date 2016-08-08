@@ -1,0 +1,20 @@
+{
+  "name": "telefam",
+  "version": "0.1.0",
+  "dependencies": {
+    "request": "latest",
+    "form-data": "latest"
+  },
+  "description": "A Telegram Bot API NodeJS Library to ease the use of it",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nizarmah/telefam"
+  },
+  "keywords": [
+    "telegram bot",
+    "telefam",
+    "nodejs bot"
+  ],
+  "author": "Nizar Mahmoud <nizar.mah99@gmail.com>",
+  "license": "MIT"
+}
