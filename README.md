@@ -96,8 +96,7 @@
 </p>
 <h3><a id="user-content-creating-your-bot" class="anchor" href="#creating-your-bot" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a id="user-content-Creating_your_bot_3"></a>Creating your bot</h3>
 <p>Creating your bot is simple. First thing you need to do is open Telegram and head to @BotFather. To start off, create the bot with it’s name.</p>
-<pre><code>
-/newbot
+<pre><code>/newbot
 </code></pre>
 <p>When prompted for the name, enter the desired name of the bot. Then you must give it a username ending with <code>bot</code>. At last, save your bot <code>token</code> and make sure you don’t share it. Each bot is given a unique authentication token [when
   it is created][8]. The token looks something like <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>, but we’ll use simply <strong>&lt;token&gt;</strong> in this document instead. You can learn about obtaining tokens and generating new ones in [this
@@ -106,16 +105,14 @@
 <h3><a id="user-content-installing-library" class="anchor" href="#installing-library" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a id="user-content-Installing_library_15"></a>Installing library</h3>
 <p>This is a pretty simple step.</p>
 <p>Yet, we're gonna need <a href="https://github.com/form-data/form-data">form-data</a> and <a href="https://github.com/request/request">request</a></p>
-<pre><code>
-npm install request -save
+<pre><code>npm install request -save
 npm install form-data -save
 npm install https://github.com/nizarmah/telefam.git -save
 </code></pre>
 <blockquote><p><strong>Note</strong><br>Move <code>telefam</code> to <code>node_modules</code><br>Every Method has a <code>callback(error, response)</code></p></blockquote>
 <h3><a id="user-content-initializing-your-bot" class="anchor" href="#initializing-your-bot" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a id="user-content-Initializing_your_bot_22"></a>Initializing your bot</h3>
 <p>Start off by setting up an Express NodeJS web server if you haven’t. Then initialize the Bot as follows. Remember the bot <code>token</code> you saved previously ? Well, we’ll be using that.</p>
-<pre><code>
-var Telefam = require('telefam');
+<pre><code>var Telefam = require('telefam');
 var Fam = new Telefam('&lt;token&gt;');
 </code></pre>
 <p>Now, similar to the [Telegram Bot API], all methods are available. Also, inline mode is too. Moreover, every method’s parameters are available for use in JSON form. However, some would be included in <code>options</code>. We’ll go over what is included
@@ -205,8 +202,7 @@ var Fam = new Telefam('&lt;token&gt;');
   <p><strong>Notes</strong><br><strong>1.</strong> This method will not work if an outgoing webhook is set up.<br><strong>2.</strong> In order to avoid getting duplicate updates, recalculate <em>offset</em> after each server response.</p>
 </blockquote>
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.getUpdates({
+<pre><code>Fam.getUpdates({
     options: {
         offset: 1,
         limit: 10,
@@ -220,8 +216,7 @@ Fam.getUpdates({
 });
 </code></pre>
 <p>For polling, the bot would get updates in this manner ( from <a href="examples/getUpdates.js">getUpdates.js</a> )</p>
-<pre><code>
-var lastUpdateId = 0;
+<pre><code>var lastUpdateId = 0;
 setInterval(function () {
     Bot.getUpdates({
         options: {
@@ -1153,8 +1148,7 @@ setInterval(function () {
 <p>This object represents the contents of a file to be uploaded. Must be posted using multipart/form-data in the usual way that files are uploaded via the browser. </p>
 <blockquote><p><strong>Note</strong><br>You can only upload local files and not remote ones.<br>One file at a time, sadly.</p></blockquote>
 <p>This is how uploading an input file looks like.</p>
-<pre><code>
-file_type: {
+<pre><code>file_type: {
     path: "the/path/to/file.extension"
 }
 </code></pre>
@@ -1241,8 +1235,7 @@ file_type: {
 <p>Note that Telegram clients will display an <strong>alert</strong> to the user before opening an inline link (‘Open this link?’ together with the full URL).</p>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendMessage({
+<pre><code>Fam.sendMessage({
     chat_id: 3489324, /* chat message being sent to */
     text: "More _Random_ Stuff from https://nizarmah.me/",
     options: {
@@ -1334,8 +1327,7 @@ pre-formatted fixed-width code block
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.forwardMessage({
+<pre><code>Fam.forwardMessage({
     chat_id: 2348972, /* chat_id message being forwarded to */
     from_chat_id: 3289718, /* chat_id message being forwarded from */
     message_id: 134, /* id of message being forwarded */
@@ -1403,8 +1395,7 @@ Fam.forwardMessage({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendPhoto({
+<pre><code>Fam.sendPhoto({
     chat_id: 32428324,
     photo: "something.png",
     caption: "Photo of Something",
@@ -1489,8 +1480,7 @@ Fam.sendPhoto({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendAudio({
+<pre><code>Fam.sendAudio({
     chat_id: 32428324,
     audio: "audio.mp3",
     title: "My heavenly voice",
@@ -1562,8 +1552,7 @@ Fam.sendAudio({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendDocument({
+<pre><code>Fam.sendDocument({
     chat_id: 32428324,
     document: "resume.pdf",
     caption: "My Resume",
@@ -1631,8 +1620,7 @@ Fam.sendDocument({
 </blockquote>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendSticker({
+<pre><code>Fam.sendSticker({
     chat_id: 32428324,
     sticker: "", /* at this time i was still collecting some sticker file_ids */
     options: {
@@ -1720,8 +1708,7 @@ Fam.sendSticker({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendVideo({
+<pre><code>Fam.sendVideo({
     chat_id: 32428324,
     video: "mytwerk.mp4",
     caption: "My Twerk",
@@ -1847,8 +1834,7 @@ Fam.sendVideo({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendLocation({
+<pre><code>Fam.sendLocation({
     chat_id: 32428324,
     latitude: 32,
     longitude: 150,
@@ -1936,8 +1922,7 @@ Fam.sendLocation({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendVenue({
+<pre><code>Fam.sendVenue({
     chat_id: 32428324,
     latitude: 32,
     longitude: 150,
@@ -2016,8 +2001,7 @@ Fam.sendVenue({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendContact({
+<pre><code>Fam.sendContact({
     chat_id: @devilschannel,
     phone_number: "+96111111111,
     first_name: "Lucifer",
@@ -2066,8 +2050,7 @@ Fam.sendContact({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.sendLocation({
+<pre><code>Fam.sendLocation({
     chat_id: @devilssupergroup,
     action: "typing"
 }, function (error, res) {
@@ -2110,8 +2093,7 @@ Fam.sendLocation({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.getUserProfilePhotos({
+<pre><code>Fam.getUserProfilePhotos({
     user_id: 32428324,
     options: {
         offset: 10,
@@ -2328,8 +2310,7 @@ Fam.getUserProfilePhotos({
 </table>
 
 <p>The parameters would look something like this.</p>
-<pre><code>
-Fam.answerCallbackQuery({
+<pre><code>Fam.answerCallbackQuery({
     callback_query_id: 1348134234232,
     text: "Received Query Fam",
     show_alert: false /* test out the false and true, they are nice to check out */
