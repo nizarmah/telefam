@@ -37,20 +37,13 @@ var Bot = new TelegramBot(/* bot token here */);
 // Note that the Certificate is optional and you can not pass it
 app.get('/setWebhook/:url/:certificate', function (req, res) {
     var url = req.params.url;
-    var certificate = req.params.certificate;
+    var certificate = req.params.certificate; // certificate path
 
     Bot.setWebhook({
         url: url,
         certificate: certificate
     }, function (error, data) {
         res.send(data);
-    });
-});
-
-app.get('/Certificate', function (req, res){
-    fs.readFile(path.join(__dirname, credPaths.cert), {encoding: 'utf-8'}, function(error, data){
-        if (error) return error;
-        return res.send(data);
     });
 });
 
