@@ -22,6 +22,8 @@ Bot.sendPhoto({
     chat_id: /* your user_id here ( you can grab that by sending a message to the bot, and checking the updates ( /getUpdates ) ) */,
     photo: {
         path: /* path to your local photo */
+        url: /* url to online photo in HTTP */
+        /* only use one */
     },
     /* photo: file_id ~ in case of preuploaded photo that's in the bot's telegram files */
 });
