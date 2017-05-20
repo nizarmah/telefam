@@ -329,6 +329,44 @@ file_type: {
 	// treat res here. 
 });
 </code></pre>
+<h4><a id="user-content-sendaudio" class="anchor" href="#sendaudio" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-sendaudio" href="#sendaudio" id="user-content-sendaudio"><i></i></a>sendAudio</h4>
+<p>For sending video note messages, use the <a href="#sendvideonote">sendVideoNote</a> method.</p>
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Parameters</strong></td>
+			<td><strong>Required</strong></td>
+		</tr>
+		<tr>
+			<td>chat_id</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>video_note</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>duration</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>length</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>disable_notification</td>
+			<td><code>Options</code> Optional</td>
+		</tr>
+		<tr>
+			<td>reply_to_message_id</td>
+			<td><code>Options</code> Optional</td>
+		</tr>
+		<tr>
+			<td>reply_markup</td>
+			<td><code>Options</code> Optional</td>
+		</tr>
+	</tbody>
+</table>
 <h4><a id="user-content-senddocument" class="anchor" href="#senddocument" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-senddocument" href="#senddocument" id="user-content-senddocument"><i></i></a>sendDocument</h4>
 <table>
 	<tbody>
@@ -819,15 +857,15 @@ file_type: {
 		</tr>
 		<tr>
 			<td>chat_id</td>
-			<td>No</td>
+			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>message_id</td>
-			<td>No</td>
+			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>inline_message_id</td>
-			<td>No</td>
+			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>caption</td>
@@ -836,6 +874,141 @@ file_type: {
 		<tr>
 			<td>reply_markup</td>
 			<td><code>Options</code> Optional</td>
+		</tr>
+	</tbody>
+</table>
+<h4><a id="user-content-sendcontact" class="anchor" href="#sendcontact" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-sendcontact" href="#sendcontact" id="user-content-sendcontact"><i></i></a>sendInvoice</h4>
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Parameters</strong></td>
+			<td><strong>Required</strong></td>
+		</tr>
+		<tr>
+			<td>chat_id</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>title</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>description</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>payload</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>provider_token</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>start_parameter</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>currency</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>prices</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>photo_url</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>photo_size</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>photo_width</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>photo_height</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>need_name</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>need_phone_number</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>need_email</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>need_shipping_address</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>is_flexible</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>disable_notification</td>
+			<td><code>Options</code> Optional</td>
+		</tr>
+		<tr>
+			<td>reply_to_message_id</td>
+			<td><code>Options</code> Optional</td>
+		</tr>
+		<tr>
+			<td>reply_markup</td>
+			<td><code>Options</code> Optional</td>
+		</tr>
+	</tbody>
+</table>
+<h4><a id="user-content-sendchataction" class="anchor" href="#sendchataction" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-sendchataction" href="#sendchataction" id="user-content-sendchataction"><i></i></a>answerShippingQuery</h4>
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Parameters</strong></td>
+			<td><strong>Required</strong></td>
+		</tr>
+		<tr>
+			<td>shipping_query_id</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>ok</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>shipping_options</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>error_message</td>
+			<td>Optional</td>
+		</tr>
+	</tbody>
+</table>
+<h4><a id="user-content-sendchataction" class="anchor" href="#sendchataction" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="user-content-sendchataction" href="#sendchataction" id="user-content-sendchataction"><i></i></a>answerPreCheckoutQuery</h4>
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Parameters</strong></td>
+			<td><strong>Required</strong></td>
+		</tr>
+		<tr>
+			<td>pre_checkout_query_id</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>ok</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>error_message</td>
+			<td>Optional</td>
 		</tr>
 	</tbody>
 </table>
