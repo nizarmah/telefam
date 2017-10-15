@@ -595,6 +595,10 @@ file_type: {
 			<td>Yes</td>
 		</tr>
 		<tr>
+			<td>live_period</td>
+			<td><code>Options</code> Optional</td>
+		</tr>
+		<tr>
 			<td>disable_notification</td>
 			<td><code>Options</code> Optional</td>
 		</tr>
